@@ -8,6 +8,13 @@ phonecatControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
   function($scope, Phone) {
     $scope.phones = Phone.query();
     $scope.orderProp = 'age';
+    $scope.onNewSearchTerm = function(newSearchTerm) {
+      $scope.query = newSearchTerm;
+    };
+    $scope.onNewSortOrder = function(newSortOrder) {
+      $scope.orderProp = newSortOrder;
+      $scope.$apply();
+    };
   }]);
 
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
