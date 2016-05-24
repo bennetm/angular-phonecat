@@ -1,7 +1,7 @@
-angular.module('phonecatDirectives').directive('search-sort-io', function() {
+angular.module('phonecatComponents').directive('phoneList', function() {
     return {
         scope: {},
-        controller: 'PhoneListCtrl',
+        controller: 'PhoneListController',
         controllerAs: 'ctrl',
         templateUrl: './js/components/phone_list/phone_list.html',
         bindToController: {

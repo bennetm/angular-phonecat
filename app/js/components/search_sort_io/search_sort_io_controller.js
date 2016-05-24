@@ -11,7 +11,7 @@ angular.module('phonecatComponents')
 
         ctrl.onOrderChange = function() {
             ctrl.onSortOrderChange({newSortOrder: ctrl.sortOrder});
-            $scope.$apply();
+            //$scope.$apply();
         }
 
     });

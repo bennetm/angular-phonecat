@@ -1,5 +1,5 @@
 angular.module('phonecatComponents')
-    .controller('PhoneListCtrl', function ($scope) {
+    .controller('PhoneListController', function ($scope) {
             var ctrl = this;
 
 
