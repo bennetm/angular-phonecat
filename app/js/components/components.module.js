@@ -1,1 +1,1 @@
-angular.module('phonecatComponents', []);
+var phonecatComponents = angular.module('phonecatComponents', []);
