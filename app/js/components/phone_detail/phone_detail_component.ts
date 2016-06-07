@@ -9,8 +9,8 @@ export default class PhoneDetailComponent implements ng.IComponentOptions {
     constructor() {
         this.bindings = {
             phone : '<',
-            onImageChange : '&',
-            mainImageUrl : '<'
+            mainImageUrl : '<',
+            onImageChange : '&'
         };
         this.templateUrl = './js/components/phone_detail/phone_detail.html';
         this.controller = PhoneDetailController;

@@ -1,22 +1,15 @@
 //phoneFn.$inject =  ['$resource'];
-System.register([], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    function phoneFn($resource) {
-        return $resource('phones/:phoneId.json', {}, {
-            query: {
-                method: 'GET',
-                params: { phoneId: 'phones' },
-                isArray: true
-            }
-        });
-    }
-    exports_1("default", phoneFn);
-    return {
-        setters:[],
-        execute: function() {
-            ;
+"use strict";
+function phoneFn($resource) {
+    return $resource('phones/:phoneId.json', {}, {
+        query: {
+            method: 'GET',
+            params: { phoneId: 'phones' },
+            isArray: true
         }
-    }
-});
+    });
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = phoneFn;
+;
 //# sourceMappingURL=phone.factory.js.map

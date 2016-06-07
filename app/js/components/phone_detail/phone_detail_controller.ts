@@ -13,9 +13,6 @@ export default class PhoneDetailController implements IPhoneDetailsController {
     public mainImageUrl : string ;
     public onImageChange : (object) => any;
 
-    constructor() {
-        this.mainImageUrl = this.phone.images[0];
-    }
     onImageSelect(url : string) : void {
         this.onImageChange({newImgUrl: url});
     }

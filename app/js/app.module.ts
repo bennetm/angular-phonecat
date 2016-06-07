@@ -4,7 +4,8 @@ import detail_layout from './layout/detail_layout.module';
 import search_sort_io from './components/search_sort_io/search_sort_io.module';
 import phone_list from './components/phone_list/phone_list.module';
 import phone_detail from './components/phone_detail/phone_detail.module';
-import checkmark from './filters/checkmark.module'
+import checkmark from './filters/checkmark.module';
+//import { UpgradeAdapter } from '@angular/upgrade';
 
 
 configure.$inject = [ '$routeProvider'];
@@ -42,5 +43,8 @@ var phonecatApp = angular.module('phonecatApp', [
 
 // Bootstrap the Angular 1.5 app
 angular.bootstrap(document.documentElement, ['phonecatApp']);
+
+//const upgradeAdapter = new UpgradeAdapter();
+//upgradeAdapter.bootstrap(document.body, ['phonecatApp'], {strictDi: true});
 
 
