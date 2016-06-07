@@ -217,11 +217,11 @@ Requires a webserver that serves the application. See Running the app during dev
       img/              --> image files
       index.html        --> app layout file (the main html template file of the app)
       js/               --> javascript files
-        app.js          --> the main application module
-        controllers.js  --> application controllers
+        app.module.ts          --> the main application module
+        detail_layout.controller.ts  --> application controllers
         directives.js   --> application directives
-        filters.js      --> custom angular filters
-        services.js     --> custom angular services
+        checkmark.filter.ts      --> custom angular filters
+        phone.factory.ts     --> custom angular services
         animations.js   --> hooks for running JQuery animations with ngAnimate
       partials/         --> angular view partials (partial html templates) used by ngRoute
         partial1.html
