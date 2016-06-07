@@ -1,27 +1,17 @@
-System.register([], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    var SearchController;
-    return {
-        setters:[],
-        execute: function() {
-            SearchController = (function () {
-                function SearchController() {
-                    this.searchTerm = '';
-                    this.sortOrder = this.initialSortOrder;
-                }
-                SearchController.prototype.onTermChange = function (queryString) {
-                    this.onSearchTermChange({ newSearchTerm: queryString });
-                };
-                ;
-                SearchController.prototype.onOrderChange = function (orderString) {
-                    this.onSortOrderChange({ newSortOrder: orderString });
-                };
-                ;
-                return SearchController;
-            }());
-            exports_1("default", SearchController);
+angular.module('phonecatComponents')
+    .controller('SearchSortIOCtrl', function ($scope) {
+        var ctrl = this;
+
+        ctrl.searchTerm = ctrl.inputSearchTerm();
+        ctrl.sortOrder = ctrl.inputSortOrder();
+
+        ctrl.onTermChange = function() {
+            ctrl.onSearchTermChange({newSearchTerm: ctrl.searchTerm});
         }
-    }
-});
-//# sourceMappingURL=search_sort_io_controller.js.map
+
+        ctrl.onOrderChange = function() {
+            ctrl.onSortOrderChange({newSortOrder: ctrl.sortOrder});
+            //$scope.$apply();
+        }
+
+    });
